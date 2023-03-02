@@ -21,17 +21,17 @@ function startClock() {
 document.addEventListener('click', function (event) {
     const elemento = event.target;
     if (elemento.classList.contains('start')){
-        relogio.classList.remove('pausado')
+        relogio.classList.remove('paused')
         clearInterval(timer);
         startClock();
     }
     if (elemento.classList.contains('pause')){
-        relogio.classList.add('pausado')
+        relogio.classList.add('paused')
         clearInterval(timer);
     }
     if (elemento.classList.contains('clear')){
         clearInterval(timer);
-        relogio.classList.remove('pausado')
+        relogio.classList.remove('paused')
         relogio.innerHTML = '00:00:00';
         segundos = 0;
     }
